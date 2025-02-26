@@ -4,13 +4,13 @@
 
 | Term                   | Definitie                                                                                                                                             |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <dfn>Definitie</dfn>   | Een definitie is een beschrijving van een woord. Een ander woord voor _definitie_ is betekenis of beschrijving.                                       |
+| <dfn>Fiets</dfn>       | Een vervoermiddel met minimaal twee wielen dat met spierkracht via pedalen wordt aangedreven, al dan niet met elektrische trapondersteuning          |
 
 
 
 <p class="note" title="">
 Geef de term op deze manier aan in de tekst:  
-We gebruiken een <a>definitie</a> om een woord te omschrijven.
+We gebruiken een <a>fiets</a> om te fietsen.
 </p>
 
 
