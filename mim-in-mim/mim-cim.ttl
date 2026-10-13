@@ -1,0 +1,70 @@
+#
+# Dit bestand bevat het CIM metamodel voor MIM 2.0, uitgedrukt in MIM zelf
+#
+@prefix mim: <http://modellen.mim-standaard.nl/def/mim#>.
+@prefix cim: <http://modellen.mim-standaard.nl/metamodel/cim#>.
+
+cim:Objecttype a mim:Objecttype;
+  mim:naam "Objecttype"@nl;
+  mim:attribuuttype cim:Objecttype.naam;
+.
+cim:Objecttype.naam a mim:Attribuuttype;
+  mim:naam "naam"@nl;
+  mim:waardetype cim:KorteTekst;
+.
+
+cim:Attribuuttype a mim:Objecttype;
+  mim:naam "Attribuuttype"@nl;
+  mim:attribuuttype cim:Attribuuttype.naam;
+.
+cim:Attribuuttype.naam a mim:Attribuuttype;
+  mim:naam "naam"@nl;
+  mim:waardetype cim:KorteTekst;
+.
+
+cim:Waardetype a mim:Objecttype;
+  mim:naam "Waardetype"@nl;
+  mim:attribuuttype cim:Waardetype.naam;
+.
+cim:Waardetype.naam a mim:Attribuuttype;
+  mim:naam "naam"@nl;
+  mim:waardetype cim:KorteTekst;
+.
+
+cim:Objecttype.Attribuuttype a mim:Relatietype;
+  mim:propositie [
+    mim:verwoording "kent";
+    mim:bron cim:Attribuuttype.objecttype;
+    mim:doel cim:Objecttype.attribuuttype;
+  ];
+.
+cim:Objecttype.attribuuttype a mim:Rolinvulling;
+  mim:naam "attribuuttype";
+  mim:rolinvuller cim:Attribuuttype;
+  mim:kardinaliteit "0..n";
+.
+cim:Attribuuttype.objecttype a mim:Rolinvulling;
+  mim:rolinvuller cim:Objecttype;
+  mim:kardinaliteit "1..1";
+.
+
+cim:Attribuuttype.Waardetype a mim:Relatietype;
+  mim:propositie [
+    mim:verwoording "met";
+    mim:bron cim:Waardetype.attribuuttype;
+    mim:doel cim:Attribuuttype.waardetype;
+  ];
+.
+cim:Waardetype.attribuuttype a mim:Rolinvulling;
+  mim:rolinvuller cim:Attribuuttype;
+  mim:kardinaliteit "0..n";
+.
+cim:Attribuuttype.waardetype a mim:Rolinvulling;
+mim:naam "waardetype";
+  mim:rolinvuller cim:Waardetype;
+  mim:kardinaliteit "1..1";
+.
+
+cim:KorteTekst a mim:Waardetype;
+  mim:naam "KorteTekst"@nl;
+.
