@@ -59,6 +59,11 @@ mim:naam a owl:DatatypeProperty;
 # worden.
 # =============================================================================
 
+mim:Fenomeen a owl:Class;
+  rdfs:label "Fenomeen"@nl;
+  owl:disjointUnionOf (mim:Objecttype mim:Relatietype)
+.
+
 mim:Objecttype a owl:Class;
   rdfs:label "Objecttype"@nl;
 .

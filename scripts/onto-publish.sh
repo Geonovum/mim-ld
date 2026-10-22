@@ -16,3 +16,8 @@ fi
 java -jar ../libs/rdf2rdf.jar -i ../model/mim-ontologie.ttl -i2 ../model/mim-sh-cim.ttl -o ../model/mim-cim.ttl
 java -jar ../libs/rdf2xml.jar ../model/mim-cim.ttl ../model/mim-cim.graphml ../libs/rdf2graphml.xsl add ../model/mim-cim-edited.graphml
 rm ../model/mim-cim.ttl
+
+# Create diagram for CIM metamodel (alternatief met Fenomeen)
+java -jar ../libs/rdf2rdf.jar -i ../model/mim-ontologie.ttl -i2 ../model/mim-sh-cim-fenomeen.ttl -o ../model/mim-cim.ttl
+java -jar ../libs/rdf2xml.jar ../model/mim-cim.ttl ../model/mim-cim-fenomeen.graphml ../libs/rdf2graphml.xsl add ../model/mim-cim-edited.graphml
+rm ../model/mim-cim.ttl
